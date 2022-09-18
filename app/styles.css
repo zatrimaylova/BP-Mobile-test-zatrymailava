@@ -446,6 +446,10 @@ body {
     height: 120px;
   }
 
+  .information__list-item {
+    line-height: 24px;
+  }
+
   .selection-block {
     height: 146px;
   }
@@ -722,20 +726,28 @@ body {
     margin-bottom: 8px;
   }
 
-  .inactive {
-    margin-top: 8px;
-  }
+  /* .inactive {
+    margin-top: 16px;
+  } */
 
   #monthly .inactive, #annyally .inactive {
     height: 174px;
     width: 141px;
-    margin-top: 8px;
+    margin-top: 16px;
     background-color: #495795;
     display: none;
   }
 
   #monthly:not(.inactive) {
     margin-left: 44px;
+  }
+
+  #monthly:not(.active) {
+    margin-top: 16px;
+  }
+
+  #annyally:not(.active) {
+    margin-top: 16px !important;
   }
 
   .inactive > h3 {
