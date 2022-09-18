@@ -683,3 +683,68 @@ body {
     width: 300px;
   }
 }
+
+@media (min-device-width: 390px) and (min-device-height: 844px) {
+  .main .container {
+    padding-top: 153;
+  }
+
+  .title {
+    font-size: 38px;
+    line-height: 44px;
+    padding-bottom: 44px;
+  }
+
+  .selection-block {
+    height: 190px;
+  }
+
+  .information__list-item {
+    font-size: 20px;
+  }
+
+  #monthly:not(.inactive), #annually:not(.inactive) {
+    height: 190px;
+    width: 154px;
+  }
+
+  .continue-button {
+    width: 300px;
+    height: 60px;
+  }
+
+  a > button:not(.continue-button), .footer .link-button {
+    font-size: 14px;
+  }
+
+  .continue-warning {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .inactive {
+    margin-top: 8px;
+  }
+
+  #monthly .inactive, #annyally .inactive {
+    height: 174px;
+    width: 141px;
+    margin-top: 8px;
+    background-color: #495795;
+    display: none;
+  }
+
+  .inactive > h3 {
+    font-size: 19px;
+  }
+
+  .inactive .warning-line {
+    height: 24px;
+    padding-top: 1px;
+  }
+
+  .active .warning-line {
+    height: 26px;
+    padding-top: 3px;
+  }
+}
