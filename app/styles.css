@@ -734,6 +734,10 @@ body {
     display: none;
   }
 
+  #monthly:not(.inactive) {
+    margin-left: 44px;
+  }
+
   .inactive > h3 {
     font-size: 19px;
   }
