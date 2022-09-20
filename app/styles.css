@@ -495,6 +495,12 @@ html[lang^="fr"] .main .container {
     padding-bottom: 24px;
   }
 
+  html[lang^="ru"] .title {
+    font-size: 28px;
+    line-height: 28px;
+    padding-bottom: 36px;
+  }
+
   .information {
     height: 120px;
   }
@@ -543,7 +549,12 @@ html[lang^="fr"] .main .container {
     font-size: 12px;
   }
 
-  html[lang^="fr"] .inactive .warning-line h3 {
+  html[lang^="ru"] .active .warning-line h3 {
+    font-size: 11px;
+  }
+
+  html[lang^="fr"] .inactive .warning-line h3,
+  html[lang^="ru"] .inactive .warning-line h3 {
     font-size: 10px;
   }
 
@@ -689,6 +700,11 @@ html[lang^="fr"] .main .container {
     padding-bottom: 16px;
   }
 
+  html[lang^="ru"] .title {
+    font-size: 24px;
+    padding-bottom: 16px;
+  }
+
   .information {
     height: 100px;
   }
@@ -699,6 +715,14 @@ html[lang^="fr"] .main .container {
 
   .selection-block {
     height: 146px;
+  }
+
+  html[lang^="ru"] .active .warning-line h3 {
+    font-size: 11px;
+  }
+
+  html[lang^="ru"] .inactive .warning-line h3 {
+    font-size: 10px;
   }
 
   .continue-button {
@@ -720,6 +744,10 @@ html[lang^="fr"] .main .container {
 }
 
 @media (min-device-width: 414px) and (min-device-height: 736px) {
+  html[lang^="ru"] .header .container {
+    padding-top: 38px;
+  }
+
   .header .container {
     padding-top: 45px;
   }
@@ -727,6 +755,11 @@ html[lang^="fr"] .main .container {
   .title {
     font-size: 36px;
     line-height: 42px;
+  }
+
+  html[lang^="ru"] .title {
+    font-size: 30px;
+    line-height: 36px;
   }
 
   .continue-button {
@@ -776,6 +809,10 @@ html[lang^="fr"] .main .container {
     font-size: 38px;
     line-height: 36px;
     padding-bottom: 44px;
+  }
+
+  html[lang^="ru"] .title {
+    font-size: 30px;
   }
 
   html[lang^="es"] .title, html[lang^="nl"] .title {
@@ -849,11 +886,29 @@ html[lang^="fr"] .main .container {
 }
 
 @media (min-device-width: 375px) and (min-device-height: 812px) {
-  html[lang^="nl"] .inactive .warning-line h3 {
+  html[lang^="ru"] .main .container {
+    padding-top: 172px;
+  }
+
+  html[lang^="ru"] .title {
+    font-size: 28px;
+    line-height: 36px;
+    padding-bottom: 32px;
+  }
+
+  html[lang^="ru"] .active .warning-line h3 {
     font-size: 14px;
   }
 
   html[lang^="nl"] .active .warning-line h3 {
     font-size: 16px;
+  }
+
+  html[lang^="nl"] .inactive .warning-line h3 {
+    font-size: 14px;
+  }
+
+  html[lang^="ru"] .inactive .warning-line h3 {
+    font-size: 12px;
   }
 }
