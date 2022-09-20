@@ -239,6 +239,7 @@ body {
   width: 104%;
   position: absolute;
   left: -2.5%;
+  bottom: 40px;
   text-transform: uppercase;
 }
 
@@ -729,14 +730,14 @@ body {
     font-size: 14px;
   }
 
+  .warning-line {
+    bottom: 44px;
+  }
+
   .continue-warning {
     font-size: 14px;
     margin-bottom: 8px;
   }
-
-  /* .inactive {
-    margin-top: 16px;
-  } */
 
   #monthly .inactive, #annyally .inactive {
     height: 174px;
