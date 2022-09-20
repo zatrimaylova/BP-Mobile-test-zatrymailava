@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href='./styles.css'>
   <meta name="viewport" content="width=device-width">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>Test Zatrymailava</title>
@@ -22,7 +22,7 @@
         </div>
         <div class="restore-section">
           <a class="restore-link" href="#">
-            <button class="link-button">
+            <button class="link-button" id="restore">
               Restore
             </button>
           </a>
@@ -32,45 +32,43 @@
     <main class="main">
       <div class="container">
         <div class="main__text-content">
-          <h1 class="title">Unlimited Access to </br> All Features</h1>
+          <h1 class="title" id="title_el">Unlimited Access to </br> All Features</h1>
           <div class="information">
             <ul class="information__list">
-              <li class="information__list-item">Unlimited documents</li>
-              <li class="information__list-item">Export to clouds</li>
-              <li class="information__list-item">Text recognition (OCR)</li>
+              <li class="information__list-item" id="unlimited_documents">Unlimited documents</li>
+              <li class="information__list-item" id="count_mode">Export to clouds</li>
+              <li class="information__list-item" id="ocr">Text recognition (OCR)</li>
             </ul>
           </div>
         </div>
         <div class="selection-block">
           <div class="select-monthly active" id="monthly">
-            <h3>Monthly</h3>
-            <h2 class="price">$9.99</h2>
-            <p class="sale-regularity">per month</p>
+            <h3 id="monthly_el">Monthly</h3>
+            <p class="sale-regularity" id="month">per month</p>
             <div class="warning-line">
-              <h3>3 DAYS FREE!</h3>
+              <h3 id="free_period">3 DAYS FREE!</h3>
             </div>
-            <p class="sale-price">$9.99 month</p>
+            <p class="sale-price" id="per_month">$9.99 month</p>
           </div>
           <div class="sale select-annually inactive" id="annually">
             <div class="circle-sale">
-              <span>-83%</span>
+              <span id="83">-83%</span>
             </div>
-            <h3>Annually</h3>
-            <h2 class="price">$19.99</h2>
-            <p class="sale-regularity">per year</p>
+            <h3 id="annually_title">Annually</h3>
+            <p class="sale-regularity" id="per_year">per year</p>
             <div class="warning-line">
-              <h3>most popular</h3>
+              <h3 id="popular">most popular</h3>
             </div>
-            <p class="sale-price">$1.66 month</p>
+            <p class="sale-price" id="sale-month">$1.66/month</p>
           </div>
         </div>
         <div class="continue">
           <div>
-            <a target="_blank">
-              <button class="continue-button">Continue</button>
+            <a class="continue-a" href="https://apple.com/" target="_blank" id="continue-link">
+              <button class="continue-button" id="continue_el">Continue</button>
             </a>
           </div>
-          <p class="continue-warning">Auto-rewable. Cancel anytime</p>
+          <p class="continue-warning" id="cancel">Auto-rewable. Cancel anytime</p>
         </div>
       </div>
     </main>
@@ -78,14 +76,14 @@
       <div class="container">
         <div class="footer__link">
           <a href="#">
-            <button class="link-button">
+            <button class="link-button" id="terms_of_use">
               Terms of Use
             </button>
           </a>
         </div>
         <div class="footer__link">
           <a href="#">
-            <button class="link-button">
+            <button class="link-button" id="privacy_policy">
               Privacy Policy
             </button>
           </a>
@@ -94,5 +92,7 @@
     </footer>
     </div>
   </div>
+  <script src="script.js"></script>
+  <script type="text/javascript" src="./language.js"></script>
 </body>
 </html>
