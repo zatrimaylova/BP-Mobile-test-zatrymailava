@@ -15,7 +15,10 @@ const setLangParam = () => {
   if (!langParam || !languageList.includes(langParam)) {
     url.searchParams.set('lang', pageLanguage);
     window.location.href = url.href;
+    document.getElementsByTagName('body');
   }
+  const htmlTag = document.querySelector('html[lang]');
+  htmlTag.lang = pageLanguage;
 }
 
 setLangParam();
