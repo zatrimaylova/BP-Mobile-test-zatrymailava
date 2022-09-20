@@ -1,15 +1,26 @@
 const languageList = ['en', 'es', 'fr', 'ja', 'nl', 'ru', 'zh'];
 
-const getAppLanguage = () => {
-  const language = window.navigator.language || window.navigator.userLanguage;
-  console.log('language', language);
-  currentLanguage = language.substr(0,2);
+const url = new URL(document.location.href);
+const langParam = new URLSearchParams(document.location.search).get('lang');
 
-  return languageList.includes(currentLanguage) ? currentLanguage : 'en';
-};
+const language = window.navigator.language || window.navigator.userLanguage;
+const pageLanguage =
+  languageList.includes(langParam) ?
+    langParam :
+    (languageList.includes(language.substr(0,2)) ? language : 'en');
 
-const getFile = (lang) => {
-  console.log('lang', lang);
+//LANGUAGE LOGIC
+
+const setLangParam = () => {
+  if (!langParam || !languageList.includes(langParam)) {
+    url.searchParams.set('lang', pageLanguage);
+    window.location.href = url.href;
+  }
+}
+
+setLangParam();
+
+const getDictionary = (lang) => {
   let req = new XMLHttpRequest();
   req.open('GET', `./Localizations/${lang}.json`, false);
   req.send(null);
@@ -18,13 +29,8 @@ const getFile = (lang) => {
 }
 
 const setLangStr = () => {
-  const language = getAppLanguage();
-
-  console.log(language);
-
-  const dictionary = getFile(language);
-
-  console.log(dictionary);
+  const dictionary = getDictionary(pageLanguage);
+  const dictionaryList = Object.values(dictionary);
 
   const elementsToSet = [
     document.getElementById('title_el'),
@@ -46,39 +52,31 @@ const setLangStr = () => {
     document.getElementById('privacy_policy'),
   ];
 
-  const dictionaryList = Object.values(dictionary);
-
-  console.log(dictionaryList);
-
-  //console.log(dictionary);
-
   elementsToSet.forEach((element, index) => {
-    //element.innerHTML = dictionaryList[index];
-
     let price = '';
-    //const 
 
     if (!dictionaryList[index].match(/\{\{price\}\}/g, price)) {
       element.innerHTML = dictionaryList[index];
-      //console.log('kfjhgfdhjsk');
     } else {
       if (element.id === 'month' || element.id === 'per_month') {
         price = '$9.99';
+
+        if (element.id === 'per_month') {
+          const perMonthElement = document.getElementById('sale-month');
+          const perMonthText = perMonthElement.innerHTML;
+          const monthPrice = perMonthText.slice(0, perMonthText.indexOf('/'));
+          const perMonthTranslation = dictionaryList[index].slice(dictionaryList[index].indexOf('/') + 1);
+
+          perMonthElement.innerHTML = `${monthPrice}/${perMonthTranslation}`;
+        }
       } else if (element.id === 'per_year') {
         price = '$19.99';
       }
-  
-      //console.log(dictionaryList[index].match(<[^>]*>));
+
       const priceStr = dictionaryList[index].replaceAll(/\{\{price\}\}/g, price);
-      //[0-9A-F]
-      // if (element.innerHTML) {
-  
-      // }
-      //console.log(priceStr);
       element.innerHTML = priceStr;
     }
   });
 };
 
 setLangStr();
-
