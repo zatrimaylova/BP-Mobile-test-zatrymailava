@@ -303,6 +303,14 @@ body {
   bottom: 37px;
 }
 
+html[lang^="nl"] .inactive .warning-line h3 {
+  font-size: 10px;
+}
+
+html[lang^="nl"] .active .warning-line h3 {
+  font-size: 12px;
+}
+
 .inactive h3 {
   font-size: 17px;
   line-height: 20px;
@@ -770,7 +778,7 @@ html[lang^="fr"] .main .container {
     padding-bottom: 44px;
   }
 
-  html[lang^="es"] .title {
+  html[lang^="es"] .title, html[lang^="nl"] .title {
     font-size: 34px;
   }
 
@@ -837,5 +845,15 @@ html[lang^="fr"] .main .container {
   .active .warning-line {
     height: 26px;
     padding-top: 3px;
+  }
+}
+
+@media (min-device-width: 375px) and (min-device-height: 812px) {
+  html[lang^="nl"] .inactive .warning-line h3 {
+    font-size: 14px;
+  }
+
+  html[lang^="nl"] .active .warning-line h3 {
+    font-size: 16px;
   }
 }
