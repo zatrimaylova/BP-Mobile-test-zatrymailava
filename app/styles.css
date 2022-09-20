@@ -42,7 +42,7 @@ body {
 }
 
 .main .container {
-  padding: 153px 0 0;
+  padding: 160px 0 0;
 }
 
 .title {
@@ -609,7 +609,7 @@ body {
   }
 
   .main .container {
-    padding-top: 90px;
+    padding-top: 86px;
   }
 
   .title {
@@ -703,7 +703,7 @@ body {
 
   .title {
     font-size: 38px;
-    line-height: 44px;
+    line-height: 36px;
     padding-bottom: 44px;
   }
 
