@@ -770,6 +770,10 @@ html[lang^="fr"] .main .container {
     padding-bottom: 44px;
   }
 
+  html[lang^="es"] .title {
+    font-size: 34px;
+  }
+
   .selection-block {
     height: 190px;
   }
