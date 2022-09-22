@@ -182,7 +182,6 @@ body {
 }
 
 .active {
-  /* background-image: url("./Assets/shape-1.svg"); */
   background-size: contain;
   background-repeat: no-repeat;
   height: 178px;
@@ -207,7 +206,6 @@ body {
 
 #annually:not(.active),
 #monthly:not(.active) {
-  /* background-image: url("./Assets/shape-transparency.svg"); */
   background-size: contain;
   background-repeat: no-repeat;
   height: 162px;
@@ -435,7 +433,6 @@ html[lang^="fr"] .active .warning-line h3  {
 }
 
 #annually .active {
-  /* margin-right: 38px; */
   position: relative;
   background-image: url("./Assets/shape-2.svg");
 }
