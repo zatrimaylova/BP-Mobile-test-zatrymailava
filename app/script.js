@@ -13,15 +13,11 @@ const setHoverListener = (e) => {
     linkElement.href = appleUrl;
 
     monthly.classList.add('active');
-    monthly.classList.remove('inactive');
-    annually.classList.add('inactive');
     annually.classList.remove('active');
   } else if (e.currentTarget.id === 'annually' && linkElement.href !== googleUrl) {
     linkElement.href = googleUrl;
 
     monthly.classList.remove('active');
-    monthly.classList.add('inactive');
-    annually.classList.remove('inactive');
     annually.classList.add('active');
   }
 };
