@@ -40,7 +40,6 @@ const setLangStr = () => {
   elementsToSet.forEach((element) => {
     let price = '';
     const currentTranslation = Number(element.dataset.translate);
-    console.log(currentTranslation);
 
     if (!dictionaryList[currentTranslation].match(/\{\{price\}\}/g, price)) {
       element.innerHTML = dictionaryList[currentTranslation];
