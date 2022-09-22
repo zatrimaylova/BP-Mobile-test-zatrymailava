@@ -35,48 +35,31 @@ const setLangStr = () => {
   const dictionary = getDictionary(pageLanguage);
   const dictionaryList = Object.values(dictionary);
 
-  const elementsToSet = [
-    document.getElementById('title_el'),
-    document.getElementById('unlimited_documents'),
-    document.getElementById('count_mode'),
-    document.getElementById('ocr'),
-    document.getElementById('monthly_el'),
-    document.getElementById('month'),
-    document.getElementById('free_period'),
-    document.getElementById('per_month'),
-    document.getElementById('annually_title'),
-    document.getElementById('83'),
-    document.getElementById('per_year'),
-    document.getElementById('popular'),
-    document.getElementById('continue_el'),
-    document.getElementById('cancel'),
-    document.getElementById('terms_of_use'),
-    document.getElementById('restore'),
-    document.getElementById('privacy_policy'),
-  ];
+  const elementsToSet = document.querySelectorAll('[data-translate]');
 
-  elementsToSet.forEach((element, index) => {
+  elementsToSet.forEach((element) => {
     let price = '';
+    const currentTranslation = Number(element.dataset.translate);
 
-    if (!dictionaryList[index].match(/\{\{price\}\}/g, price)) {
-      element.innerHTML = dictionaryList[index];
+    if (!dictionaryList[currentTranslation].match(/\{\{price\}\}/g, price)) {
+      element.innerHTML = dictionaryList[currentTranslation];
     } else {
-      if (element.id === 'month' || element.id === 'per_month') {
+      if (currentTranslation === 5 || currentTranslation === 7) {
         price = '$9.99';
 
-        if (element.id === 'per_month') {
-          const perMonthElement = document.getElementById('sale-month');
+        if (currentTranslation === 7) {
+          const perMonthElement = document.querySelector('[data-month]');
           const perMonthText = perMonthElement.innerHTML;
           const monthPrice = perMonthText.slice(0, perMonthText.indexOf('/'));
-          const perMonthTranslation = dictionaryList[index].slice(dictionaryList[index].indexOf('/') + 1);
+          const perMonthTranslation = dictionaryList[currentTranslation].slice(dictionaryList[currentTranslation].indexOf('/') + 1);
 
-          perMonthElement.innerHTML = `${monthPrice}/${perMonthTranslation}`;
+          perMonthElement.innerHTML += `/${perMonthTranslation}`;
         }
-      } else if (element.id === 'per_year') {
+      } else if (currentTranslation === 10) {
         price = '$19.99';
       }
 
-      const priceStr = dictionaryList[index].replaceAll(/\{\{price\}\}/g, price);
+      const priceStr = dictionaryList[currentTranslation].replaceAll(/\{\{price\}\}/g, price);
       element.innerHTML = priceStr;
     }
   });
