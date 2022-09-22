@@ -293,7 +293,7 @@ body {
 }
 
 .active .sale-regularity {
-  line-height: 10px;
+  line-height: 14px;
 }
 
 .active h2, .active-sale h2 {
@@ -597,6 +597,10 @@ html[lang^="fr"] .main .container {
     font-size: 11px;
   }
 
+  html[lang^="nl"] .active .warning-line h3 {
+    font-size: 12px;
+  }
+
   html[lang^="fr"] #monthly:not(.active) .warning-line h3,
   html[lang^="fr"] #annually:not(.active) .warning-line h3,
   html[lang^="ru"] #monthly:not(.active)  .warning-line h3,
@@ -730,7 +734,7 @@ html[lang^="fr"] .main .container {
 
 @media (max-device-height: 667px) and (max-device-width: 375px) {
   #monthly {
-    margin-left: 20%;
+    margin-left: 18%;
   }
 }
 
