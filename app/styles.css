@@ -277,6 +277,20 @@ body {
   color: #FFFFFF;
 }
 
+html[lang^="fr"] .active, .active-sale {
+  padding: 36px 0 14px;
+}
+
+html[lang^="fr"] #annually:not(.active),
+html[lang^="fr"] #monthly:not(.active) {
+  padding: 34px 0 14px;
+}
+
+html[lang^="fr"] #annually:not(.active) .sale-regularity,
+html[lang^="fr"] #monthly:not(.active) .sale-regularity {
+  margin-top: 6px;
+}
+
 .active strong {
   font-size: 19px;
   line-height: 22px;
@@ -287,9 +301,17 @@ body {
   margin-top: 18px;
 }
 
+html[lang^="fr"] .active .sale-regularity {
+  margin-top: 12px;
+}
+
+html[lang^="fr"] .active .sale-regularity {
+  margin-top: 12px;
+}
+
 #annually:not(.active) .sale-regularity,
 #monthly:not(.active) .sale-regularity {
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 .active .sale-regularity {
@@ -567,8 +589,40 @@ html[lang^="fr"] .main .container {
     margin-bottom: 12px;
   }
 
+  html[lang^="fr"] .active h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  html[lang^="fr"] #annually:not(.active) h3,
+  html[lang^="fr"] #monthly:not(.active) h3 {
+    margin-bottom: 4px;
+  }
+
+  html[lang^="fr"] .active, .active-sale {
+    padding: 28px 0 14px;
+  }
+  
+  html[lang^="fr"] #annually:not(.active),
+  html[lang^="fr"] #monthly:not(.active) {
+    padding: 24px 0 14px;
+  }
+
   .active .sale-regularity {
     margin-top: 14px;
+  }
+
+  html[lang^="fr"] .active .strong {
+    margin-top: 16px;
+  }
+
+  html[lang^="fr"] .active .sale-regularity {
+    margin-top: 0;
+  }
+
+  html[lang^="fr"] #annually:not(.active) .sale-regularity,
+  html[lang^="fr"] #monthly:not(.active) .sale-regularity {
+    margin-top: 0;
   }
 
   #annually:not(.active) .sale-regularity,
@@ -590,7 +644,7 @@ html[lang^="fr"] .main .container {
   }
 
   html[lang^="fr"] .active .warning-line h3 {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   html[lang^="ru"] .active .warning-line h3 {
@@ -722,12 +776,6 @@ html[lang^="fr"] .main .container {
   .footer .container {
     padding-top: 12px;
     padding-bottom: 36px;
-  }
-}
-
-@media (max-device-height: 736px) and (max-device-width: 414px) {
-  #monthly {
-    /* margin-left: 82px; */
   }
 }
 
@@ -896,6 +944,35 @@ html[lang^="fr"] .main .container {
     width: 154px;
   }
 
+  #monthly:not(.active), #annyally:not(.active) {
+    height: 174px;
+    width: 141px;
+    margin-top: 16px;
+    height: 162px;
+    width: 131px;
+    margin-top: 8px;
+  }
+
+  #monthly:not(.active) > h3,
+  #annyally:not(.active) > h3 {
+    font-size: 19px;
+  }
+
+  #monthly:not(.active) .warning-line,
+  #annyally:not(.active) .warning-line {
+    height: 24px;
+    padding-top: 1px;
+  }
+
+  html[lang^="fr"] .active .sale-regularity {
+    margin-top: 8px;
+  }
+
+  .active .warning-line {
+    height: 26px;
+    padding-top: 3px;
+  }
+
   .continue-button {
     width: 300px;
     height: 60px;
@@ -912,39 +989,6 @@ html[lang^="fr"] .main .container {
   .continue-warning {
     font-size: 14px;
     margin-bottom: 8px;
-  }
-
-  #monthly:not(.active), #annyally:not(.active) {
-    height: 174px;
-    width: 141px;
-    margin-top: 16px;
-    height: 162px;
-    width: 131px;
-    margin-top: 8px;
-  }
-
-  #monthly .active {
-    margin-left: 44px;
-  }
-
-  /* #monthly:not(.active), #annyally:not(.active) {
-    margin-top: 16px;
-  } */
-
-  #monthly:not(.active) > h3,
-  #annyally:not(.active) > h3 {
-    font-size: 19px;
-  }
-
-  #monthly:not(.active) .warning-line,
-  #annyally:not(.active) .warning-line {
-    height: 24px;
-    padding-top: 1px;
-  }
-
-  .active .warning-line {
-    height: 26px;
-    padding-top: 3px;
   }
 }
 
